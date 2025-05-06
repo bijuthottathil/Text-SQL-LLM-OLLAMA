@@ -7,3 +7,19 @@
      3) curl -X POST http://127.0.0.1:5000/text-to-sql \
      -H "Content-Type: application/json" \
      -d '{"query": "Show all weather records for New York in the past 7 days."}'
+
+
+   For Sqlplaintext.py
+------------------------
+     4 )curl -X POST http://127.0.0.1:5000/explain \
+     -H "Content-Type: application/json" \
+     -d '{
+           "type": "ETL",
+           "code": "df = spark.read.csv(\"/mnt/data.csv\"); df_clean = df.dropna(); df_clean.write.parquet(\"/mnt/cleaned\")"
+         }'
+    5) curl -X POST http://127.0.0.1:5000/explain \
+     -H "Content-Type: application/json" \
+     -d '{
+           "type": "SQL",
+           "code": "SELECT customer_id, SUM(total_amount) FROM orders GROUP BY customer_id HAVING SUM(total_amount) > 1000;"
+         }'
