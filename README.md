@@ -48,5 +48,28 @@
 
 Note:- I have attached SQL Scripts and few sample queries with this reposiroty for your reference
 
+1 Interesting document generation using Ollama and Flask API![image](https://github.com/user-attachments/assets/368ceb35-16c0-4024-a8d7-67f646cd30f1)
+
+This API-OLLAMA integration will help to generate documentation for the SQL Statement and ETL programming statements like below
+![image](https://github.com/user-attachments/assets/b8af4983-ceae-4d73-bfbe-4f34f1608a8c)
+
+
+
+curl -X POST http://127.0.0.1:5000/explain \
+     -H "Content-Type: application/json" \
+     -d '{
+           "type": "SQL",
+           "code": "SELECT customer_id, SUM(total_amount) FROM orders GROUP BY customer_id HAVING SUM(total_amount) > 1000;"
+         }'
+
+  curl -X POST http://127.0.0.1:5000/explain \
+     -H "Content-Type: application/json" \
+     -d '{
+           "type": "ETL",
+           "code": "df = spark.read.csv(\"/mnt/data.csv\"); df_clean = df.dropna(); df_clean.write.parquet(\"/mnt/cleaned\")"
+         }'
+
+
+
 
 
