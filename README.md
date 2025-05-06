@@ -1,4 +1,4 @@
-# Text-to-SQL-LLM
+# This LLM project is to translate Sample Natural Language Queries to SQL queries automatically and generate results
 
 ![image](https://github.com/user-attachments/assets/9001f224-3e14-4644-9b1c-c48043dcbb3f)
 
