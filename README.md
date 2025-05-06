@@ -21,6 +21,8 @@
 
 1. Make sure that Ollama is running in your machine
 2. ollama run llama2
+3. Run pip install flask openai psycopg2-binary    to install dependencies
+
 
 ![image](https://github.com/user-attachments/assets/3640bef7-236c-441c-bd79-5ea7c4079054)
 
