@@ -1,0 +1,9 @@
+    1) curl -X POST http://127.0.0.1:5000/text-to-sql \                                                                                 
+     -H "Content-Type: application/json" \
+     -d '{"query": "List all customers who signed up after January 1, 2023."}'
+
+     2) curl -X POST http://127.0.0.1:5000/text-to-sql -H "Content-Type: application/json" -d '{"query": "List all products price>10$"}'
+
+     3) curl -X POST http://127.0.0.1:5000/text-to-sql \
+     -H "Content-Type: application/json" \
+     -d '{"query": "Show all weather records for New York in the past 7 days."}'
